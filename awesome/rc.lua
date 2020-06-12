@@ -98,7 +98,9 @@ local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "❶", "❷", "❸", "❹", "❺" }
+-- awful.util.tagnames = { "🅐", "🅑", "🅒", "🅓", "🅔" }
+-- awful.util.tagnames = { "🅰", "🅱", "🅲", "🅳", "🅴" }
 awful.layout.layouts = {
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
@@ -360,14 +362,49 @@ globalkeys = my_table.join(
             if client.focus then client.focus:raise() end
         end,
         {description = "focus right", group = "client"}),
+    
     awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
+    -- ===================
     -- Layout manipulation
+    -- ===================
+
+    --  *SWAP RIGHT*
+    -- ~~~~~~~~~~~~~~
+    awful.key({ modkey, "Shift" }, "Right",
+        function()
+            awful.client.swap.global_bydirection("right") end,
+        {description = "swap right", group = "client"}),
+    --  *SWAP LEFT*
+    -- ~~~~~~~~~~~~~~
+    awful.key({ modkey, "Shift" }, "Left",
+        function()
+            awful.client.swap.global_bydirection("left") end,
+        {description = "swap left", group = "client"}),
+    --  *SWAP UP*
+    -- ~~~~~~~~~~~~~~
+    awful.key({ modkey, "Shift" }, "Up",
+        function()
+            awful.client.swap.global_bydirection("up") end,
+        {description = "swap up", group = "client"}),
+    --  *SWAP DOWN*
+    -- ~~~~~~~~~~~~~~
+    awful.key({ modkey, "Shift" }, "Down",
+        function()
+            awful.client.swap.global_bydirection("down") end,
+        {description = "swap down", group = "client"}),
+
+    -- VIM keys
+    -- ~~~~~~~~~
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "Left", function () awful.client.swap.byidx(  1)    end,
+    --           {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
+    --           {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
@@ -419,9 +456,9 @@ globalkeys = my_table.join(
               {description = "add new tag", group = "tag"}),
     awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
               {description = "rename tag", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
+    awful.key({ modkey }, ",", function () lain.util.move_tag(-1) end,
               {description = "move tag to the left", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
+    awful.key({ modkey }, ".", function () lain.util.move_tag(1) end,
               {description = "move tag to the right", group = "tag"}),
     awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end,
               {description = "delete tag", group = "tag"}),
@@ -581,6 +618,8 @@ globalkeys = my_table.join(
               {description = "open firefox", group = "launcher"}),
     awful.key({ altkey, "Control" }, "n", function () awful.spawn("snap run standard-notes") end,
               {description = "open standard notes", group = "launcher"}),
+    awful.key({ altkey, "Control" }, "i", function () awful.spawn("snap run glimpse-editor") end,
+              {description = "open glimpse editor", group = "launcher"}),
     awful.key({ altkey, "Control" }, "y", function () awful.spawn("flatpak run com.jetbrains.PyCharm-Professional") end,
               {description = "open pycharm-professional", group = "launcher"}),
     awful.key({ altkey, "Control" }, "g", function () awful.spawn("chromium") end,
@@ -759,11 +798,11 @@ awful.rules.rules = {
       properties = { titlebars_enabled = true } },
 
     -- Set Firefox to always map on the first tag on screen 1.
-    { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+    -- { rule = { class = "Firefox" },
+    --   properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },
+--     { rule = { class = "Gimp", role = "gimp-image-window" },
+--           properties = { maximized = true } },
 }
 -- }}}
 
