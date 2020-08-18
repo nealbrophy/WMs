@@ -11,6 +11,9 @@ Repo for various Window Manager configs, themes etc
 ### Regolith
 - Slightly customized (so far) [Regolith Linux](https://regolith-linux.org/) i3 config.
 
+### Regolith-Mint
+- Slightly customized [Regolith Linux](https://regolith-linux.org/) i3 config for use with [Linux Mint](https://linuxmint.com/)
+
 ### MX Linux i3
 - Slightly customized version of [Viyoriya's Solus](https://viyoriya.github.io/posts/solus-i3wm/) set-up.
 	- Use `sudo apt install` there instead of `sudo eopkg it`.
