@@ -1,7 +1,8 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-font pango:Monospace Regular 9
+#font pango:Monospace Regular 9
+font pango:Source Code Pro Medium 13
 
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
@@ -34,24 +35,28 @@ floating_modifier $mod
 # split orientation
 bindsym $mod+h split h;exec notify-send 'Tile horizontally'
 bindsym $mod+v split v;exec notify-send 'Tile vertically'
-bindsym $mod+Shift+q split toggle
+bindsym $mod+space split toggle
 bindsym $mod+f fullscreen toggle
 
-# 
-################################### Autostart applications ########################################
+
+###################################################################################### 
+# Autostart applications 
+######################################################################################
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id albert
 exec --no-startup-id compton -e 0.92 -o 0.92 -b 
 #exec --no-startup-id compton -b
+exec --no-startup-id variety
+exec --no-startup-id ~/.screenlayout/screens.sh
 
 
 # Program launcher & categorized menu
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+z exec --no-startup-id morc_menu
-bindsym $mod+q kill
+bindsym $mod+shift+q kill
 bindsym $mod+Shift+p exec powermenu
 bindsym $mod+Shift+x exec xrandrmenu
 bindsym $mod+Shift+i exec i3layoutmenu
@@ -61,9 +66,9 @@ bindsym $mod+Shift+Print exec scrotmenu
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+Return exec thunar
 bindsym mod1+Control+g exec chromium
-bindsym mod1+Control+s exec subl
-bindsym mod1+Control+f exec firefox
-bindsym mod1+Control+p exec "sudo mx-packageinstaller"
+bindsym Mod1+Control+s exec subl
+bindsym Mod1+Control+f exec firefox
+bindsym Mod1+Control+p exec "sudo mx-packageinstaller"
 
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'Dunst restarted'"
 bindsym Print exec --no-startup-id scrot ~/Pictures/%Y-%m-%d-%H-%M-%S.png 
@@ -73,21 +78,18 @@ bindsym $mod+Shift+h exec xdg-open /usr/share/doc/i3/userguide.html
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Ctrl+m exec st -- 'alsamixer'
 
-###### commented #####################################
-#exec --no-startup-id clipit
-#bindsym $mod+t exec --no-startup-id pkill compton
-#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Ctrl+b exec gnome-terminal -e 'bmenu'
-#bindsym $mod+F5 exec gnome-terminal -e 'mocp'
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-################################### Experiment ####################################################
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-#exec_always --no-startup-id gnome-power-manager
-#exec --no-startup-id gnome-flashback
-#gsettings set org.gnome.desktop.background show-desktop-icons false
-#exec /usr/bin/budgie-daemon
-################################### Start Applications ############################################
+# Variety
+## Modify // Variety -Next // <Ctrl> <Shift> n ##
+bindsym Ctrl+Shift+n exec variety -n
+## Modify // Variety -Prev // <Ctrl> <Shift> p ##
+bindsym Ctrl+Shift+p exec variety -p
+## Modify // Variety -Fav // <Ctrl> <Shift> f ##
+bindsym Ctrl+Shift+f exec variety -f
+
+
+###################################################################################### 
+# Window management
+######################################################################################
 
 # focus alternatively, you can use the cursor keys: 
 bindsym $mod+j focus left
@@ -110,7 +112,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Mod1+f focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
@@ -125,20 +127,47 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+###################################################################################### 
+# Workspaces 
+######################################################################################
+
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
-set $ws1 1:<span font='10' weight='bold'>①</span>
-set $ws2 2:<span font='10' weight='bold'>②</span>
-set $ws3 3:<span font='10' weight='bold'>③</span>
-set $ws4 4:<span font='10' weight='bold'>④</span>
-set $ws5 5:<span font='10' weight='bold'>⑤</span>
-set $ws6 6:<span font='10' weight='bold'>⑥</span>
-set $ws7 7:<span font='10' weight='bold'>⑦</span>
-set $ws8 8:<span font='10' weight='bold'>⑧</span>
-set $ws9 9:<span font='10' weight='bold'>⑨</span>
+#set $ws1 1:<span font='10' weight='bold'>⓵</span>
+#set $ws2 2:<span font='10' weight='bold'>⓶</span>
+#set $ws3 3:<span font='10' weight='bold'>⓷</span>
+#set $ws4 4:<span font='10' weight='bold'>⓸</span>
+#set $ws5 5:<span font='10' weight='bold'>⓹</span>
+#set $ws6 6:<span font='10' weight='bold'>⓺</span>
+#set $ws7 7:<span font='10' weight='bold'>⓻</span>
+#set $ws8 8:<span font='10' weight='bold'>⓼</span>
+#set $ws9 9:<span font='10' weight='bold'>⓽</span>
+
+# Alt Workspace names 1
+#set $ws1 1:<span font='10' weight='bold'>⑴</span>
+#set $ws2 2:<span font='10' weight='bold'>⑵</span>
+#set $ws3 3:<span font='10' weight='bold'>⑶</span>
+#set $ws4 4:<span font='10' weight='bold'>⑷</span>
+#set $ws5 5:<span font='10' weight='bold'>⑸</span>
+#set $ws6 6:<span font='10' weight='bold'>⑹</span>
+#set $ws7 7:<span font='10' weight='bold'>⑺</span>
+#set $ws8 8:<span font='10' weight='bold'>⑻</span>
+#set $ws9 9:<span font='10' weight='bold'>⑼</span>
+
+# Alt Workspace names 1
+set $ws1 1:<span font='10' weight='bold'>1</span>
+set $ws2 2:<span font='10' weight='bold'>2</span>
+set $ws3 3:<span font='10' weight='bold'>3</span>
+set $ws4 4:<span font='10' weight='bold'>4</span>
+set $ws5 5:<span font='10' weight='bold'>5</span>
+set $ws6 6:<span font='10' weight='bold'>6</span>
+set $ws7 7:<span font='10' weight='bold'>7</span>
+set $ws8 8:<span font='10' weight='bold'>8</span>
+set $ws9 9:<span font='10' weight='bold'>9</span>
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -174,13 +203,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
- assign [class="St"] $ws1
- assign [class="Google-chrome"] $ws2
- assign [class="Firefox"] $ws2
- assign [class="Sublime_text"] $ws3
- assign [class="Subl"] $ws3
- assign [class="Grub-customizer"] $ws5
- assign [class="Grub-GParted"] $ws5
+# assign [class="St"] $ws1
+# assign [class="Google-chrome"] $ws2
+# assign [class="Firefox"] $ws1
+# assign [class="Sublime_text"] $ws3
+# assign [class="Subl"] $ws3
+# assign [class="Grub-customizer"] $ws5
+# assign [class="Grub-GParted"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -201,6 +230,10 @@ for_window [window_role="Open Files"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
+
+###################################################################################### 
+# System commands
+######################################################################################
 
 # reload / restart / lock / exit
 bindsym $mod+Shift+c reload
@@ -224,6 +257,10 @@ mode --pango_markup "$mode_system" {
     bindsym Escape mode "default"
 }
 
+###################################################################################### 
+# Resize
+######################################################################################
+
 set $mode_resize <span font='9' weight='bold'>  Resize </span>
 bindsym $mod+r mode "$mode_resize"
 mode --pango_markup "$mode_resize" {
@@ -241,7 +278,9 @@ mode --pango_markup "$mode_resize" {
     bindsym Escape mode "default"
 }
 
-##################################### i3bar ##################################################
+###################################################################################### 
+# i3 Bar
+######################################################################################
 
 set $base00 #101218
 set $base01 #1f222d
@@ -265,14 +304,14 @@ bar {
     
     height 24
 	position top
-    font pango:Monospace Regular 9
+    font pango:Source Code Pro Medium 11, Material Design Icons 11
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
     tray_padding 1
     strip_workspace_numbers yes
     
     #workspace_buttons no  
     #  please set your primary output 'xrandr --output eDP1 --primary'
-    #  tray_output primary
+    tray_output HDMI-0
     #  tray_output LVDS1 
 
 	bindsym button4 nop
@@ -297,14 +336,20 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused          #556064 #556064 #80FFF9 #FDF6E3	
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
   client.background       #2B2C2B
 
-##################################### i3-gaps ##################################################
+###################################################################################### 
+# i3-Gaps 
+######################################################################################
+
+new_window pixel 2
+new_float pixel 2
+client.focused          #002b36 #7ef788 #fdf6e3 #268bd2
 
 # Set i3-gaps - inner/outer gaps
 gaps inner 14
