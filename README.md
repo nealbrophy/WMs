@@ -23,3 +23,8 @@ Repo for various Window Manager configs, themes etc
 - rofi scripts based on [cramermarius](https://github.com/cramermarius/rofi-menus)' work (customized slightly to work with `sysvinit` rather than `systemd`.
 
 ## bspwm
+### Manjaro
+- Base manjaro-bspwm config with minor changes
+	- to_usr-bin/limepanel pushes limepanel to Right-Hand monitor
+	- adjust bspwm/bspwmrc adds top_padding for panel to RH monitor only and allow window gap at all times
+	

@@ -2,7 +2,7 @@
 # bspwm hotkeys
 ##################################################################
 # Cleanly quit bspwm
-super + shift + {r}
+super + shift + {delete,r}
 	bspc {quit 1 && pkill lemonpanel && pkill lemonbar,wm -r}
 
 # Show keybindings
@@ -15,7 +15,7 @@ super + F2
    
 # Show deadd-notification-center
 super + v
-  showDeadd   
+  showDeadd   V
     	
 ##################################################################
 # Window manipulation
@@ -331,15 +331,15 @@ XF86Sleep
 
 # variety next	
 ctrl + shift + n
-		variety -n
+		$TERMINAL variety -n
 
 # variety previous
 ctrl + shift + n
-		variety -p
+		$TERMINAL variety -p
 
 # variety add to favs folder
 ctrl + shift + n
-		variety -f
+		$TERMINAL variety -f
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
