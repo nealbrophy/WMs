@@ -7,7 +7,7 @@ export PANEL_HEIGHT
 #This creates negative padding equal to window gap so that gaps are shown only between windows and not on desktop edges.
 bspc config window_gap $gap;
 bspc config -m HDMI-0 top_padding $(($PANEL_HEIGHT))
-#bspc config -m HDMI-1 top_padding $gap
+bspc config -m HDMI-1 top_padding 0
 #bspc config left_padding -$gap
 #bspc config right_padding -$gap
 #bspc config bottom_padding -$gap

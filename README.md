@@ -28,3 +28,5 @@ Repo for various Window Manager configs, themes etc
 	- to_usr-bin/limepanel pushes limepanel to Right-Hand monitor
 	- adjust bspwm/bspwmrc adds top_padding for panel to RH monitor only and allow window gap at all times
 	
+## Rofi
+- Mixture of [Manjaro-bspwm](https://manjaro.org/downloads/community/bspwm/)'s config and [ad1090x](https://github.com/adi1090x/rofi)'s fantastic rofi applets.

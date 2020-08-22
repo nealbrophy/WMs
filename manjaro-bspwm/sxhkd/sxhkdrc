@@ -17,6 +17,30 @@ super + F2
 super + v
   showDeadd   V
     	
+# rofi powermenu
+super + shift + p
+  ~/.config/rofi/scripts/menu_powermenu.sh
+
+# rofi apps menu
+super + shift + a
+  ~/.config/rofi/scripts/menu_apps.sh
+
+# rofi quicklinks
+super + shift + l
+  ~/.config/rofi/scripts/menu_quicklinks.sh
+
+# rofi volume
+super + shift + v
+  ~/.config/rofi/scripts/menu_volume.sh  
+
+# rofi network
+super + shift + n
+  ~/.config/rofi/scripts/menu_network.sh
+  
+# rofi network
+super + shift + s
+  ~/.config/rofi/scripts/menu_screenshot.sh
+    	
 ##################################################################
 # Window manipulation
 ##################################################################
