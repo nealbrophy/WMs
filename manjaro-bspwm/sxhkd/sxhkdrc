@@ -99,8 +99,8 @@ ctrl + space
 	auto-presel
 	
 # Presel window for splitting in certain direction
-alt + ctrl + {a,s,w,d}
-	bspc node -p \~{west,south,north,east} -i
+#alt + ctrl + {a,s,w,d}
+#	bspc node -p \~{west,south,north,east} -i
 
 #alt + ctrl + {h,j,k,l}
 #	bspc node -p \~{west,south,north,east}
@@ -296,31 +296,72 @@ ctrl + alt + p
 super + p
 	$TERMINAL -e pacfzf
 	
+	
 # Launch fzf Yaysearch
 super + y
 	$TERMINAL -e yayfzf
 
+# Launch terminal
 super + Return
 	default-terminal
-super + shift + Return
-	thunar
 super + z
 	default-terminal
-
 super + shift + z
 	open-terminal-here
-	
+
+# Launch thunar
+super + shift + Return
+	thunar
+super + e
+	thunar
+
+# finder
 super + r
 	rofi-finder.sh
-	
+
+# clipboard	
 super + w
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# default browser
 super + shift + b
 	$BROWSER
-    		
-super + e
-	thunar
+
+# brave
+ctrl + alt + b
+	brave
+
+# firefox
+ctrl + alt + f
+	firefox
+	
+# chromium
+ctrl + alt + g
+	chromium
+	
+# vscode
+ctrl + alt + v
+	code
+
+# atom
+ctrl + alt + a
+	atom
+
+# sublime
+ctrl + alt + s
+	subl
+
+# standard-notes
+ctrl + alt + n
+	~/Applications/standard-notes-3.4.2-linux-x86_64_ac5c96fd88d1e7df4cedbac92ce4f214.AppImage
+	
+# bitwarden
+ctrl + alt + numbersign
+	~/Applications/Bitwarden-1.20.1-x86_64_885f2b37cc7c5dcb2b9c326f3dd2f68c.AppImage
+	
+# gitkraken
+ctrl + alt + k
+	gitkraken
 
 # Use slightly bigger font for ranger
 super + shift + e
@@ -355,15 +396,15 @@ XF86Sleep
 
 # variety next	
 ctrl + shift + n
-		$TERMINAL variety -n
+	variety -n
 
 # variety previous
 ctrl + shift + n
-		$TERMINAL variety -p
+	variety -p
 
 # variety add to favs folder
 ctrl + shift + n
-		$TERMINAL variety -f
+	variety -f
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
