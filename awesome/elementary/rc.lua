@@ -41,20 +41,18 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- Chosen colors and buttons look alike adapta maia theme
-beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
+beautiful.init("/home/neal/.config/awesome/themes/elementary/theme.lua")
 beautiful.icon_theme        = "Papirus-Dark"
 beautiful.bg_normal         = "#509dd2"
 beautiful.bg_focus          = "#509dd2"
-beautiful.titlebar_close_button_normal = "/usr/share/awesome/themes/cesious/titlebar/close_normal_adapta.png"
-beautiful.titlebar_close_button_focus = "/usr/share/awesome/themes/cesious/titlebar/close_focus_adapta.png"
 beautiful.font              = "Noto Sans Regular 12"
 beautiful.notification_font = "Noto Sans Bold 14"
 
 -- This is used later as the default terminal and editor to run.
-browser = "exo-open --launch WebBrowser" or "firefox"
-filemanager = "exo-open --launch FileManager" or "thunar"
-gui_editor = "mousepad"
-terminal = os.getenv("TERMINAL") or "lxterminal"
+browser = "epiphany" or "firefox"
+filemanager = "io.elementary.files"
+gui_editor = "io.elementary.code"
+terminal = "io.elementary.terminal"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
