@@ -11,9 +11,11 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ### Elementary OS awesomeWM theme [WIP]
 - Based on [Manjaro Awesome](https://manjaro.org/downloads/community/awesome/) theme & config
-- Minimal work so far, wouldn't suggest using this yet.
+- Functional but ugly. 
+- Panel w/ logo, workspace, layouts.
+- ISSUES: massive black/grey border around windows. Tried fix listed [here](http://www.webupd8.org/2015/11/fix-large-black-borders-around-header.html) but no joy.
 
-## i3
+## i3Q
 Configs for [i3 Window Manager](https://i3wm.org/)
 ### Regolith
 - Slightly customized (so far) [Regolith Linux](https://regolith-linux.org/) i3 config.
