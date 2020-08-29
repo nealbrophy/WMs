@@ -11,11 +11,21 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ### Elementary OS awesomeWM theme [WIP]
 - Based on [Manjaro Awesome](https://manjaro.org/downloads/community/awesome/) theme & config
-- Functional but ugly. 
+- Functional but UGLY. 
 - Panel w/ logo, workspace, layouts.
-- ISSUES: massive black/grey border around windows. Tried fix listed [here](http://www.webupd8.org/2015/11/fix-large-black-borders-around-header.html) but no joy.
+- Keybindings for launching elementary-files, elementary-terminal, elementary-screenshot-tool
+- ISSUES: massive black/grey border (or shadow) around windows. Tried fix listed [here](http://www.webupd8.org/2015/11/fix-large-black-borders-around-header.html) but no joy.
+- Steps to install:
+	- Install AwesomeWM `sudo apt install awesome awesome-doc awesome-extra`
+	- Install compton `sudo apt install compton`
+	- Install git `sudo apt install git`
+	- Clone this repo `mkdir tmp && cd tmp && git clone https://github.com/nealbrophy/WMs`
+	- Create awesome config directory `mkdir ~/.config/awesome`
+	- Copy the files `cp ~/tmp/WMs/awesome/elementary/* ~/.config/awesome`
 
-## i3Q
+***
+
+## i3
 Configs for [i3 Window Manager](https://i3wm.org/)
 ### Regolith
 - Slightly customized (so far) [Regolith Linux](https://regolith-linux.org/) i3 config.
@@ -31,6 +41,8 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 	- run `sudo apt install libxcb-shape0-dev` before completing the i3-gaps installation steps (in addition to borey's instructions)
 - rofi scripts based on [cramermarius](https://github.com/cramermarius/rofi-menus)' work (customized slightly to work with `sysvinit` rather than `systemd`.
 - PROBLEM: Keybinding for launching `mx-packageinstaller` only works if you've already opened something as `root`/`sudo` and entered password.
+
+***
 
 ## bspwm
 Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)

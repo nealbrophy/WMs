@@ -26,7 +26,7 @@ run nm-applet
 run light-locker
 run xcape -e 'Super_L=Super_L|Control_L|Escape'
 run io.elementary.files-daemon
-# run io.elementary.files-pkexec
+
 
 
 # run thunar --daemon
@@ -40,7 +40,7 @@ if (command -v system-config-printer-applet && ! pgrep applet.py ); then
   system-config-printer-applet &
 fi
 
-run compton --shadow-exclude '!focused'
+# run compton --shadow-exclude '!focused'
+compton -b -c --backend glx --vsync opengl-swc
 run blueman-applet
-run gtk.css
 # run msm_notifier
