@@ -9,7 +9,7 @@ local themes_path = require("gears.filesystem").get_themes_dir()
 theme = {}
 
 theme.font              = "Raleway Regular 10"
-theme.notification_font = "Raleway Bold 14"
+theme.notification_font = "Raleway Bold 12"
 
 theme.bg_normal   = "#0d52bf"
 theme.bg_focus    = "#704c61"
@@ -46,7 +46,7 @@ theme.hotkeys_modifiers_fg = "#2EB398"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_submenu_icon = "/home/neal/.config/awesome/themes/elementary/icons/submenu.png"
+theme.menu_submenu_icon = "/home/neal/.config/awesome/themes/elementary/icons/submenu-dots.png"
 theme.menu_height = 25
 theme.menu_width  = 200
 
@@ -96,6 +96,8 @@ theme.layout_cornernw   = "/home/neal/.config/awesome/themes/elementary/layouts/
 theme.layout_cornerne   = "/home/neal/.config/awesome/themes/elementary/layouts/cornerne.png"
 theme.layout_cornersw   = "/home/neal/.config/awesome/themes/elementary/layouts/cornersw.png"
 theme.layout_cornerse   = "/home/neal/.config/awesome/themes/elementary/layouts/cornerse.png"
+
+theme.wallpaper = "/usr/share/backgrounds/Sunset by the Pier.jpg"
 
 -- theme.awesome_icon = themes_path .. "cesious/icons/manjaro64.png"
 theme.awesome_icon = "/home/neal/.config/awesome/themes/elementary/icons/elementary64_white.png"

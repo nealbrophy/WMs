@@ -14,7 +14,8 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 - Functional but UGLY. 
 - Panel w/ logo, workspace, layouts.
 - Keybindings for launching elementary-files, elementary-terminal, elementary-screenshot-tool
-- ISSUES: massive black/grey border (or shadow) around windows. Tried fix listed [here](http://www.webupd8.org/2015/11/fix-large-black-borders-around-header.html) but no joy.
+- Fixed gtk border issue using [this answer](https://elementaryos.stackexchange.com/a/24053) (just copy `gtk.css` file from this repo to `~/.config/gtk-3.0`)
+- Add standard Elementary wallpaper
 - Steps to install:
 	- Install AwesomeWM `sudo apt install awesome awesome-doc awesome-extra`
 	- Install compton `sudo apt install compton`
