@@ -24,6 +24,13 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 	- Create awesome config directory `mkdir ~/.config/awesome`
 	- Copy the files `cp ~/tmp/WMs/awesome/elementary/* ~/.config/awesome`
 
+### Arcolinux Awesome
+- Personal config
+- Purple respin of lcpz's [awesome-copycats](https://github.com/lcpz/awesome-copycats) "PowerArrow" theme
+	- Added `spiral`, `max`, and `magnify` layout icons
+	- Changed panel to purple
+	- Changed arrow-motif to purple gradations
+	- Changed `cel` squares to dark purple	
 ***
 
 ## i3
