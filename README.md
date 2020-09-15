@@ -50,6 +50,10 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 - rofi scripts based on [cramermarius](https://github.com/cramermarius/rofi-menus)' work (customized slightly to work with `sysvinit` rather than `systemd`.
 - PROBLEM: Keybinding for launching `mx-packageinstaller` only works if you've already opened something as `root`/`sudo` and entered password.
 
+### Manjaro-i3
+- Slightly customized [Manjaro](https://manjaro.org/) i3 config.
+
+
 ***
 
 ## bspwm
