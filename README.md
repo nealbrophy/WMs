@@ -31,6 +31,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 	- Changed panel to purple
 	- Changed arrow-motif to purple gradations
 	- Changed `cel` squares to dark purple	
+	
 ***
 
 ## i3
@@ -65,3 +66,11 @@ Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 	
 ## Rofi
 - Mixture of [Manjaro-bspwm](https://manjaro.org/downloads/community/bspwm/)'s config and [ad1090x](https://github.com/adi1090x/rofi)'s fantastic rofi applets.
+
+***
+
+## Openbox
+Configs for [Openbox](http://openbox.org/wiki/Main_Page)
+
+### Archcraft
+- Base [Archcraft](https://archcraft-os.github.io/) Openbox config w/ keybindings for pacfzf/yayfzf
