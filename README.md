@@ -54,6 +54,9 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 ### Manjaro-i3
 - Slightly customized [Manjaro](https://manjaro.org/) i3 config.
 
+### Archlabs
+- Base Archlabs i3 config with colours changed and personal keybindings
+- REQUIRES miklhh's [funky-i3blocks](https://github.com/miklhh/i3blocks-config)
 
 ***
 
