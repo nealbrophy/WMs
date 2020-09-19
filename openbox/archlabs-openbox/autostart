@@ -1,0 +1,8 @@
+# required for xfce settings to work
+xfsettingsd &
+
+# start the panel
+tint2 &
+
+# load wallpaper
+nitrogen --restore &
