@@ -11,7 +11,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ### Elementary OS awesomeWM theme [WIP]
 - Based on [Manjaro Awesome](https://manjaro.org/downloads/community/awesome/) theme & config
-- Functional but UGLY. 
+- Functional but UGLY.
 - Panel w/ logo, workspace, layouts.
 - Keybindings for launching elementary-files, elementary-terminal, elementary-screenshot-tool
 - Fixed gtk border issue using [this answer](https://elementaryos.stackexchange.com/a/24053) (just copy `gtk.css` file from this repo to `~/.config/gtk-3.0`)
@@ -30,8 +30,8 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 	- Added `spiral`, `max`, and `magnify` layout icons
 	- Changed panel to purple
 	- Changed arrow-motif to purple gradations
-	- Changed `cel` squares to dark purple	
-	
+	- Changed `cel` squares to dark purple
+
 ***
 
 ## i3
@@ -63,7 +63,7 @@ Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 - Base manjaro-bspwm config with minor changes
 	- `to_usr-bin/limepanel` pushes limepanel to Right-Hand monitor (just replace the `limepanel` in usr/bin with the one enclosed here)
 	- adjust `bspwm/bspwmrc`; adds top_padding for panel to RH monitor only and allow window gap at all times
-	
+
 ## Rofi
 - Mixture of [Manjaro-bspwm](https://manjaro.org/downloads/community/bspwm/)'s config and [ad1090x](https://github.com/adi1090x/rofi)'s fantastic rofi applets.
 
@@ -74,3 +74,6 @@ Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
 ### Archcraft
 - Base [Archcraft](https://archcraft-os.github.io/) Openbox config w/ keybindings for pacfzf/yayfzf
+
+### Archlabs
+- Base [Archlabs](https://archlabslinux.com/) Openbox config w/ personal keybinds.
