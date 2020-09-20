@@ -2,7 +2,7 @@
 
 Repo for various Window Manager configs, themes etc
 
-## Awesome
+## Awesome ![awesomelogo]
 
 Configs for [Awesome Window Manager](https://awesomewm.org/).
 
@@ -39,7 +39,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ***
 
-## i3
+## i3 ![i3wmlogo]
 
 Configs for [i3 Window Manager](https://i3wm.org/)
 
@@ -72,7 +72,7 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 ***
 
-## bspwm
+## bspwm ![bspwmlogo]
 
 Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
@@ -85,7 +85,7 @@ Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
 ***
 
-## Openbox
+## Openbox ![openboxlogo]
 
 Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
@@ -108,3 +108,15 @@ Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 ## Rofi
 
 - A selection of Rofi themes from [adi1090x's rofi applets](https://github.com/adi1090x/rofi)
+
+
+# Media
+
+[awesomelogo]:https://github.com/nealbrophy/WMs/media/wm-logos/awesome.png
+[bspwmlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/bspwm.png
+[i3wmlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/i3wm.png
+[openboxlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/openbox.png
+
+- Openbox logo from [pngfind](https://www.pngfind.com/mpng/bxmmTR_openbox-logo-v2-by-skeletux-openbox-logo-hd/)
+- bspwm logo from [baskerville](https://github.com/baskerville/bspwm/issues/495#issuecomment-221929293)
+- i3wm logo from [wikipedia](https://en.wikipedia.org/wiki/I3_(window_manager))
