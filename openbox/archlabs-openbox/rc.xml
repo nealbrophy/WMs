@@ -296,7 +296,7 @@
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <command>rofi_run -r</command>
+        <command>~/.config/rofi/launchers/launcher.sh</command>
       </action>
     </keybind>
     <keybind key="C-space">
@@ -312,6 +312,36 @@
     <keybind key="C-A-Delete">
       <action name="Execute">
         <command>rofi_run -l</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-y">
+      <action name="Execute">
+        <command>termite -e /usr/bin/yayfzf</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-p">
+      <action name="Execute">
+        <command>termite -e /usr/bin/pacfzf</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-f">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-b">
+      <action name="Execute">
+        <command>brave</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-numbersign">
+      <action name="Execute">
+        <command>~/Applications/Bitwarden-1.22.1-x86_64_0a9181e84a43a85a6e342c27b1cd69d9.AppImage</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-n">
+      <action name="Execute">
+        <command>~/Applications/standard-notes-3.4.4-linux-x86_64_3db74a4e5bb3eaa1fc4954de2afec2ba.AppImage</command>
       </action>
     </keybind>
     <keybind key="W-S-Escape">
@@ -353,6 +383,9 @@
       <action name="Move"/>
     </keybind>
     <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-S-q">
       <action name="Close"/>
     </keybind>
     <keybind key="W-space">

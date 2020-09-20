@@ -1,0 +1,92 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=/home/neal/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[keyindicator]
+#Allowed keys are CAPS and NUM
+KEY=CAPS
+markup=pango
+interval=once
+signal=11
+#TEXT_ON=CapsLockOn
+#TEXT_OFF=CapsLockOff
+#COLOR_ON=#00FF00
+#COLOR_OFF=#222222
+#BG_COLOR_ON=
+#BG_COLOR_OFF=
+
+[keyindicator]
+KEY=NUM
+markup=pango
+interval=once
+signal=11
+#TEXT_ON=NumLockOn
+#TEXT_OFF=NumLockOff
+#COLOR_ON=#00FF00
+HIDE_WHEN_OFF=1
+
+[volume-pulseaudio]
+interval=once
+#signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+#AUDIO_HIGH_SYMBOL='  '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL='  '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL='  '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#ffffff"
+#MUTED_COLOR="#a0a0a0"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
+
+[arch-update]
+markup=pango
+interval= 3600
+QUIET=true
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+AUR=true
+LABEL=
+
+[calendar]
+interval=1
+LABEL=
+DATEFMT=+%H:%M:%S
+# SHORTFMT=+%H:%M:%S
+HEIGHT=180
+WIDTH=220

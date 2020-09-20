@@ -27,19 +27,23 @@ set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 
 bar {
         font $i3-wm.bar.font
-        status_command i3blocks
+         status_command i3blocks
 
         colors {
-            background #282C34
-            statusline #DBDBDB
+            background #1c2023
+            statusline #E1E1E1
 
-            focused_workspace  #F9FAF9 #9e7de3 #292F34
-            active_workspace   #595B5B #353836 #FDF6E3
+            focused_workspace  #E1E1E1 #778899 #1c2023
+            active_workspace   #778899 #353836 #FDF6E3
             inactive_workspace #595B5B #222D31 #EEE8D5
             binding_mode       #16a085 #2C2C2C #F9FAF9
-            urgent_workspace   #16a085 #FDF6E3 #E5201D
+            urgent_workspace   #f43753 #FDF6E3 #1c2023
         }
 }
+
+# keyindicator
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+1 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+1 i3blocks
 
 ###############     Autostart      ##################
 
@@ -66,8 +70,8 @@ bindsym Control+Mod1+f exec firefox
 bindsym Control+Mod1+b exec brave
 bindsym Control+Mod1+numbersign exec ~/Applications/Bitwarden-1.22.1-x86_64_0a9181e84a43a85a6e342c27b1cd69d9.AppImage
 bindsym Control+Mod1+n exec ~/Applications/standard-notes-3.4.4-linux-x86_64_3db74a4e5bb3eaa1fc4954de2afec2ba.AppImage
-bindsym Control+$Mod+p exec termite -e pacfzf
-bindsym Control+$Mod+y exec termite -e yayfzf
+bindsym $Mod+Shift+p exec termite -e /usr/bin/pacfzf
+bindsym $Mod+Shift+y exec termite -e /usr/bin/yayfzf
 
 # core
 bindsym $Mod+w          exec --no-startup-id exo-open --launch WebBrowser

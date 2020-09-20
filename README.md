@@ -68,7 +68,7 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 ### :wavy_dash: Archlabs
 
 - Base Archlabs i3 config with colours changed and personal keybindings
-- REQUIRES miklhh's [funky-i3blocks](https://github.com/miklhh/i3blocks-config)
+- i3blocks scripts from [vivien's i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) and [Anachron's i3blocks](https://github.com/Anachron/i3blocks)
 
 ***
 
