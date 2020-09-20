@@ -2,7 +2,7 @@
 
 Repo for various Window Manager configs, themes etc
 
-## Awesome ![AwesomeWM Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/awesome.png)
+## ![AwesomeWM Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/awesome.png) Awesome
 
 Configs for [Awesome Window Manager](https://awesomewm.org/).
 
@@ -39,7 +39,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ***
 
-## i3 ![i3wm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/i3wm.png)
+## ![i3wm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/i3wm.jpg) i3
 
 Configs for [i3 Window Manager](https://i3wm.org/)
 
@@ -72,7 +72,7 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 ***
 
-## bspwm ![Bspwm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/bspwm.png)
+## ![Bspwm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/bspwm.png) Bspwm
 
 Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
@@ -85,7 +85,7 @@ Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
 ***
 
-## Openbox ![Openbox Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/openbox.png)
+## ![Openbox Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/openbox.png) Openbox
 
 Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
