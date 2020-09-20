@@ -1,15 +1,19 @@
 # Window Managers
+
 Repo for various Window Manager configs, themes etc
 
 ## Awesome
+
 Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 ### General
+
 - `rc.lua` (awesomewm's config) with personal keybindings, apps etc
 - themes
   - currently a slightly customized version of [lcpz's](https://github.com/lcpz) [awesome-copycats](https://github.com/lcpz/awesome-copycats) "PowerArrow" theme
 
 ### Elementary OS awesomeWM theme [WIP]
+
 - Based on [Manjaro Awesome](https://manjaro.org/downloads/community/awesome/) theme & config
 - Functional but UGLY.
 - Panel w/ logo, workspace, layouts.
@@ -25,6 +29,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 	- Copy the files `cp ~/tmp/WMs/awesome/elementary/* ~/.config/awesome`
 
 ### Arcolinux Awesome
+
 - Personal config
 - Purple respin of lcpz's [awesome-copycats](https://github.com/lcpz/awesome-copycats) "PowerArrow" theme
 	- Added `spiral`, `max`, and `magnify` layout icons
@@ -35,14 +40,19 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 ***
 
 ## i3
+
 Configs for [i3 Window Manager](https://i3wm.org/)
+
 ### Regolith
+
 - Slightly customized (so far) [Regolith Linux](https://regolith-linux.org/) i3 config.
 
 ### Regolith-Mint
+
 - Slightly customized [Regolith Linux](https://regolith-linux.org/) i3 config for use with [Linux Mint](https://linuxmint.com/)
 
 ### MX Linux i3
+
 - Slightly customized version of [Viyoriya's Solus](https://viyoriya.github.io/posts/solus-i3wm/) set-up for use with [MX Linux](https://mxlinux.org/).
 	- Use `sudo apt install` there instead of `sudo eopkg it`.
 	- Not 100% certain on the power & calendar functions in i3bar working yet. Seem to sometimes break.
@@ -52,31 +62,49 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 - PROBLEM: Keybinding for launching `mx-packageinstaller` only works if you've already opened something as `root`/`sudo` and entered password.
 
 ### Manjaro-i3
+
 - Slightly customized [Manjaro](https://manjaro.org/) i3 config.
 
 ### Archlabs
+
 - Base Archlabs i3 config with colours changed and personal keybindings
 - REQUIRES miklhh's [funky-i3blocks](https://github.com/miklhh/i3blocks-config)
 
 ***
 
 ## bspwm
+
 Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
+
 ### Manjaro
+
 - Base manjaro-bspwm config with minor changes
 	- `to_usr-bin/limepanel` pushes limepanel to Right-Hand monitor (just replace the `limepanel` in usr/bin with the one enclosed here)
 	- adjust `bspwm/bspwmrc`; adds top_padding for panel to RH monitor only and allow window gap at all times
 
-## Rofi
-- Mixture of [Manjaro-bspwm](https://manjaro.org/downloads/community/bspwm/)'s config and [ad1090x](https://github.com/adi1090x/rofi)'s fantastic rofi applets.
 
 ***
 
 ## Openbox
+
 Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
 ### Archcraft
+
 - Base [Archcraft](https://archcraft-os.github.io/) Openbox config w/ keybindings for pacfzf/yayfzf
 
 ### Archlabs
+
 - Base [Archlabs](https://archlabslinux.com/) Openbox config w/ personal keybinds.
+
+***
+
+# Utilities
+
+## fzf
+
+- Manjaro-bspwm's pacfzf & yayfzf files
+
+## Rofi
+
+- A selection of Rofi themes from [adi1090x's rofi applets](https://github.com/adi1090x/rofi)
