@@ -12,7 +12,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 - themes
   - currently a slightly customized version of [lcpz's](https://github.com/lcpz) [awesome-copycats](https://github.com/lcpz/awesome-copycats) "PowerArrow" theme
 
-### Elementary OS awesomeWM theme [WIP]
+### :wavy_dash: Elementary OS awesomeWM theme [WIP]
 
 - Based on [Manjaro Awesome](https://manjaro.org/downloads/community/awesome/) theme & config
 - Functional but UGLY.
@@ -28,7 +28,7 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 	- Create awesome config directory `mkdir ~/.config/awesome`
 	- Copy the files `cp ~/tmp/WMs/awesome/elementary/* ~/.config/awesome`
 
-### Arcolinux Awesome
+### :wavy_dash: Arcolinux Awesome
 
 - Personal config
 - Purple respin of lcpz's [awesome-copycats](https://github.com/lcpz/awesome-copycats) "PowerArrow" theme
@@ -43,15 +43,15 @@ Configs for [Awesome Window Manager](https://awesomewm.org/).
 
 Configs for [i3 Window Manager](https://i3wm.org/)
 
-### Regolith
+### :wavy_dash: Regolith
 
 - Slightly customized (so far) [Regolith Linux](https://regolith-linux.org/) i3 config.
 
-### Regolith-Mint
+### :wavy_dash: Regolith-Mint
 
 - Slightly customized [Regolith Linux](https://regolith-linux.org/) i3 config for use with [Linux Mint](https://linuxmint.com/)
 
-### MX Linux i3
+### :wavy_dash: MX Linux i3
 
 - Slightly customized version of [Viyoriya's Solus](https://viyoriya.github.io/posts/solus-i3wm/) set-up for use with [MX Linux](https://mxlinux.org/).
 	- Use `sudo apt install` there instead of `sudo eopkg it`.
@@ -61,11 +61,11 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 - rofi scripts based on [cramermarius](https://github.com/cramermarius/rofi-menus)' work (customized slightly to work with `sysvinit` rather than `systemd`.
 - PROBLEM: Keybinding for launching `mx-packageinstaller` only works if you've already opened something as `root`/`sudo` and entered password.
 
-### Manjaro-i3
+### :wavy_dash: Manjaro-i3
 
 - Slightly customized [Manjaro](https://manjaro.org/) i3 config.
 
-### Archlabs
+### :wavy_dash: Archlabs
 
 - Base Archlabs i3 config with colours changed and personal keybindings
 - REQUIRES miklhh's [funky-i3blocks](https://github.com/miklhh/i3blocks-config)
@@ -76,7 +76,7 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
-### Manjaro
+### :wavy_dash: Manjaro
 
 - Base manjaro-bspwm config with minor changes
 	- `to_usr-bin/limepanel` pushes limepanel to Right-Hand monitor (just replace the `limepanel` in usr/bin with the one enclosed here)
@@ -89,11 +89,11 @@ Configs for [bspwm Window Manager](https://github.com/baskerville/bspwm)
 
 Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
-### Archcraft
+### :wavy_dash: Archcraft
 
 - Base [Archcraft](https://archcraft-os.github.io/) Openbox config w/ keybindings for pacfzf/yayfzf
 
-### Archlabs
+### :wavy_dash: Archlabs
 
 - Base [Archlabs](https://archlabslinux.com/) Openbox config w/ personal keybinds.
 
@@ -101,22 +101,19 @@ Configs for [Openbox](http://openbox.org/wiki/Main_Page)
 
 # Utilities
 
-## fzf
+## :keyboard: fzf
 
 - Manjaro-bspwm's pacfzf & yayfzf files
 
-## Rofi
+## :keyboard: Rofi
 
 - A selection of Rofi themes from [adi1090x's rofi applets](https://github.com/adi1090x/rofi)
 
 
-# Media
-
-[awesomelogo]:https://github.com/nealbrophy/WMs/media/wm-logos/awesome.png
-[bspwmlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/bspwm.png
-[i3wmlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/i3wm.png
-[openboxlogo]:https://github.com/nealbrophy/WMs/media/wm-logos/openbox.png
+# :framed_picture: Media
 
 - Openbox logo from [pngfind](https://www.pngfind.com/mpng/bxmmTR_openbox-logo-v2-by-skeletux-openbox-logo-hd/)
-- bspwm logo from [baskerville](https://github.com/baskerville/bspwm/issues/495#issuecomment-221929293)
+- Bspwm logo from [baskerville](https://github.com/baskerville/bspwm/issues/495#issuecomment-221929293)
 - i3wm logo from [wikipedia](https://en.wikipedia.org/wiki/I3_(window_manager))
+- AwesomeWM logo from [wikipedia](https://commons.wikimedia.org/wiki/File:Awesome_logo.svg)
+- Github emoji from [this cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#computer)aaasdasdasda
