@@ -15,9 +15,9 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+Shift+n border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+Mod1+u border none
+bindsym $mod+Mod1+1 border pixel 1
+bindsym $mod+Mod1+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -41,8 +41,20 @@ bindsym $mod+z exec --no-startup-id morc_menu
 # launch pacfzf
 bindsym $mod+p exec terminal -e pacfzf
 
-# launc yayfzf
+# launch yayfzf
 bindsym $mod+y exec terminal -e pacfzf
+
+# main launcher
+bindsym $mod+Shift+a exec ~/.config/rofi/launchers/launcher.sh
+
+# variety next
+# bindsym Ctrl+Shift+n exec variety -n
+
+# variety previous
+# bindsym Ctrl+Shift+p exec variety -p
+
+# variety favourite
+# bindsym Ctrl+Shift+f exec variety -f
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -63,9 +75,10 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+# bindsym $mod+Shift+n exec pcmanfm
+bindsym $mod+Shift+n exec dolphin
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+# bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
@@ -299,7 +312,7 @@ exec_always --no-startup-id fix_xcursor
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -331,7 +344,7 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+tray_output HDMI-0
 #	tray_output eDP1
 
 	bindsym button4 nop
@@ -362,7 +375,7 @@ bindsym $mod+m bar mode toggle
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -382,7 +395,7 @@ gaps outer -2
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
