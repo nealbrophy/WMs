@@ -232,11 +232,11 @@ smart_borders on
 bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.conf 
     position top
-    font pango:monospace 8, FontAwesome8
+    font pango:monospace 7, FontAwesome7
     tray_output HDMI-0
     colors {
       separator          #666666
-        background         #222222
+        background         #292B34
         statusline         #dddddd
         focused_workspace  #0088CC #0088CC #ffffff
         active_workspace   #333333 #333333 #ffffff
@@ -250,20 +250,20 @@ exec --no-startup-id pnmixer &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nitrogen --restore &
-exec --no-startup-id /usr/bin/sparky-polkit &
 exec --no-startup-id xautolock -time 10 -locker 'i3lock-fancy -g -p' & ## this command activates screenlock after 10 minutes of inactivity ##
 exec --no-startup-id xss-lock -- i3lock-fancy -g -p & ## this command activates screenlock when system resumes from sleep/hibernation ##
-exec_always --no-startup-id conky --config=/opt/conky/conky-sparky-i3.conf &
 exec --no-startup-id thunar-daemon &
 exec --no-startup-id xdg-user-dirs-update &
 
 #quit
-bindsym $mod+Shift+e exec --no-startup-id /usr/share/i3blocks/shutdown_menu_sparky
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
+
+bindsym $mod+Tab exec --no-startup-id ~/.config/rofi/scripts/i3layoutmenu.sh
 
 # monitor settings
 bindsym $mod+Ctrl+l exec --no-startup-id lxrandr
 # file manager
-bindsym $mod+Ctrl+f exec --no-startup-id sparky-fileopen
+bindsym $mod+Shift+n exec --no-startup-id thunar
 # web browser
 bindsym $mod+Ctrl+w exec --no-startup-id x-www-browser
 # wallpaper
@@ -277,11 +277,13 @@ bindsym $mod+Ctrl+p exec --no-startup-id system-config-printer
 # lxtask
 bindsym $mod+Ctrl+x exec --no-startup-id lxtask
 # gscreenshot
-bindsym $mod+Ctrl+s exec --no-startup-id gscreenshot
+bindsym $mod+Ctrl+s exec --no-startup-id xfce4-screenshooter
 
 #CAPS/NUM
 bindsym --release Caps_Lock 	exec --no-startup-id "pkill -SIGRTMIN+11 i3blocks; notify-send --expire-time=1000 'Capslock toggle'"
 bindsym --release Num_Lock  	exec --no-startup-id "pkill -SIGRTMIN+11 i3blocks; notify-send --expire-time=1000 'Numlock toggle'"
+
+
 
 #XF86 events
 #Change screen brightness
