@@ -51,15 +51,24 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 - Slightly customized [Regolith Linux](https://regolith-linux.org/) i3 config for use with [Linux Mint](https://linuxmint.com/)
 
-### :wavy_dash: MX Linux i3
+### :wavy_dash: MX Linux i3 version 2
 
-- Slightly customized version of [Viyoriya's Solus](https://viyoriya.github.io/posts/solus-i3wm/) set-up for use with [MX Linux](https://mxlinux.org/).
-	- Use `sudo apt install` there instead of `sudo eopkg it`.
-	- Not 100% certain on the power & calendar functions in i3bar working yet. Seem to sometimes break.
+- Based on [Sparky Linux](https://sparkylinux.org/) i3 config with [EndeavourOS](https://endeavouros.com/) i3status set-up
+- Rofi theming from [Viyoriya's Solus](https://viyoriya.github.io/posts/solus-i3wm/) set-up for use with [MX Linux](https://mxlinux.org/).
 - i3-gaps installation courtesy of [boreycutts](https://gist.github.com/boreycutts/6417980039760d9d9dac0dd2148d4783)' instructions.
-	- run `sudo apt install libxcb-shape0-dev` before completing the i3-gaps installation steps (in addition to borey's instructions)
+	1 - `sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev 	libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake libxcb-xrm-dev libxcb-shape0-dev`
+	2 - `mkdir tmp && cd tmp && git clone https://www.github.com/Airblader/i3 i3-gaps
+		cd i3-gaps
+		git checkout gaps && git pull
+		autoreconf --force --install
+		rm -rf build
+		mkdir build
+		cd build
+		../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+		make
+		sudo make install`
 - rofi scripts based on [cramermarius](https://github.com/cramermarius/rofi-menus)' work (customized slightly to work with `sysvinit` rather than `systemd`.
-- PROBLEM: Keybinding for launching `mx-packageinstaller` only works if you've already opened something as `root`/`sudo` and entered password.
+
 
 ### :wavy_dash: Manjaro-i3
 
