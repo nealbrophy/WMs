@@ -70,6 +70,10 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 - Base Archlabs i3 config with colours changed and personal keybindings
 - i3blocks scripts from [vivien's i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) and [Anachron's i3blocks](https://github.com/Anachron/i3blocks)
 
+### :wavy_dash: Endeavour OS
+
+- Base EndeavourOS i3 configs (incl. i3blocks, i3status)
+
 ***
 
 ## ![Bspwm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/bspwm.png) Bspwm
