@@ -72,7 +72,7 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 ### :wavy_dash: Endeavour OS
 
-- Base EndeavourOS i3 configs (incl. i3blocks, i3status)
+- Base [EndeavourOS](https://endeavouros.com/) i3 configs (incl. i3blocks, i3status)
 
 ***
 
