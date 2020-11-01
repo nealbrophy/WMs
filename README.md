@@ -83,6 +83,10 @@ Configs for [i3 Window Manager](https://i3wm.org/)
 
 - Base [EndeavourOS](https://endeavouros.com/) i3 configs (incl. i3blocks, i3status)
 
+### :wavy_dash: openSUSE
+
+- Personal config for i3 on [openSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) incl. i3blocks and rofi launcher from [adi1090x](https://github.com/adi1090x/rofi)
+
 ***
 
 ## ![Bspwm Logo](https://github.com/nealbrophy/WMs/blob/master/media/wm-logos/bspwm.png) Bspwm
