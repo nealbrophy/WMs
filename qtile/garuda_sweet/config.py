@@ -61,6 +61,8 @@ keys = [
     Key(["mod1", "control"], "i", lazy.spawn('nitrogen')),
     Key(["mod1", "control"], "o", lazy.spawn(home + '/.config/qtile/scripts/picom-toggle.sh')),
     Key(["mod1", "control"], "u", lazy.spawn('pavucontrol')),
+    Key(["mod1", "control"], "l", lazy.spawn('betterlockscreen -l')),
+    Key(["mod1", "control"], "x", lazy.spawncmd()),
 
 # ALT + ... KEYS
 
@@ -287,7 +289,7 @@ def init_colors():
             ["#f4c2c2", "#f4c2c2"], # color 4
             ["#ffffff", "#ffffff"], # color 5   | Layout/Network/CPU/RAM/Active Workspace Num FG
             ["#f9dc5c", "#f9dc5c"], # color 6   | Workspace Nums FG
-            ["#62FF00", "#62FF00"], # color 7   | Main panel active window border
+            ["#2f343F", "#2f343F"], # color 7   | Main panel active window border
             ["#000000", "#000000"], # color 8
             ["#dcdfe4", "#dcdfe4"], # color 9   | Main Panel FG
             ["#ed254e", "#ed254e"], # color 10  | Sys Tray BG
@@ -309,41 +311,18 @@ colors = init_colors()
 
 # Sweet Colours
 """
-[Darkest]
-#161925
-
-[Dark]
-#282c34
-
-[Red]
-#ed254e
-
-[MidGreen]
-#71f7a0
-
-[MidYellow]
-#f9dc5c
-
-[MidBlue]
-#7cb7ff
-
-[Color5]
-#c84ded
-
-[Cyan]
-#00c1e4
-
-[GreyWhite]
-#dcdfe4
-
-[Grey]
-#c3c7d1
-
-[DarkGrey]
-#5c6370
-
-[MidGrey]
-#828997
+[Darkest] #161925
+[Dark] #282c34
+[Red] #ed254e
+[MidGreen] #71f7a0
+[MidYellow] #f9dc5c
+[MidBlue] #7cb7ff
+[Pink] #c84ded
+[Cyan] #00c1e4
+[GreyWhite] #dcdfe4
+[Grey] #c3c7d1
+[DarkGrey] #5c6370
+[MidGrey] #828997
 """
 
 def base(fg='text', bg='dark'):
@@ -424,22 +403,35 @@ def init_widgets_list():
                     margin=2,
                     txt_floating='🗗',
                     txt_minimized='>_ ',
-                    borderwidth = 1,
+                    borderwidth = 2,
                     background=colors[20],
                     #unfocused_border = 'border'
                 ),
-
-               widget.TextBox(
+ widget.TextBox(
                        text = '',
                        background = colors[20],
-                       foreground = colors[13],
+                       foreground = colors[1],
+                       padding = 0,
+                       fontsize = 37
+                       ),
+   widget.Prompt(
+                          font="Noto Sans",
+                          fontsize=14,
+                          background=colors[1],
+                          foreground=colors[9],
+                          markup=True,
+                        ),
+               widget.TextBox(
+                       text = '',
+                       background = colors[1],
+                       foreground = colors[10],
                        padding = 0,
                        fontsize = 37
                        ),
                widget.CurrentLayoutIcon(
                        custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                       foreground = colors[5],
-                       background = colors[13],
+                       foreground = colors[3],
+                       background = colors[10],
                        padding = 0,
                        scale = 0.7
                        ),
@@ -447,29 +439,28 @@ def init_widgets_list():
                       font = "Noto Sans Bold",
                       fontsize = 12,
                       foreground = colors[5],
-                      background = colors[13]
+                      background = colors[10]
                         ),
                widget.TextBox(
                        text = '',
-                       background = colors[13],
-                       foreground = colors[19],
+                       background = colors[10],
+                       foreground = colors[1],
                        padding = 0,
                        fontsize = 37
-                       ),
-
-                widget.Net(
-                         font="Noto Sans",
-                         fontsize=12,
-                        # Here enter your network name
-                         interface=["wlp6s0"],
-                         format = '{down} ↓↑ {up}',
-                         foreground=colors[15],
-                         background=colors[19],
-                         padding = 0,
-                         ),
+                       ), 
+#                widget.Net(
+#                         font="Noto Sans",
+#                         fontsize=12,
+#                        # Here enter your network name
+#                         interface=["wlp6s0"],
+#                         format = '{down} ↓↑ {up}',
+#                         foreground=colors[15],
+#                         background=colors[19],
+#                         padding = 0,
+#                         ),
                 widget.TextBox(
                        text = '',
-                       background = colors[19],
+                       background = colors[1],
                        foreground = colors[22],
                        padding = 0,
                        fontsize = 37
@@ -483,9 +474,17 @@ def init_widgets_list():
                         background = colors[22],
                         mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
                        ),
-                widget.TextBox(
+
+               widget.TextBox(
                        text = '',
                        background = colors[22],
+                       foreground = colors[1],
+                       padding = 0,
+                       fontsize = 37
+                       ),
+                widget.TextBox(
+                       text = '',
+                       background = colors[1],
                        foreground = colors[16],
                        padding = 0,
                        fontsize = 37
@@ -509,9 +508,17 @@ def init_widgets_list():
                         background = colors[16],
                         mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
                        ),
-               widget.TextBox(
+ widget.TextBox(
                        text = '',
                        background = colors[16],
+                       foreground = colors[1],
+                       padding = 0,
+                       fontsize = 37
+                       ),
+
+               widget.TextBox(
+                       text = '',
+                       background = colors[1],
                        foreground = colors[23],
                        padding = 0,
                        fontsize = 37
@@ -533,13 +540,13 @@ def init_widgets_list():
                 widget.TextBox(
                        text = '',
                        background = colors[23],
-                       foreground = colors[10],
+                       foreground = colors[1],
                        padding = 0,
                        fontsize = 37
                        ),
 
                widget.Systray(
-                       background=colors[10],
+                       background=colors[1],
                        icon_size=20,
                        padding = 4
                        ),
