@@ -24,7 +24,7 @@
 # i3-wm.bar.position: top
 #
 # Reload i3 after making Xresource changes.  Learn more at
-# https://regolith-linux.org/docs/howto/override-xres/
+# https://regolith-linux.org/docs/howtos/override-xres/
 #
 ###############################################################################
 #
@@ -103,6 +103,12 @@ set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 set_from_resource $i3-wm.binding.launcher.app i3-wm.binding.launcher.app space
 set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
 bindsym $mod+$i3-wm.binding.launcher.app exec $i3-wm.program.launcher.app
+
+## Launch // Application // <><Shift> d ##
+bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -nb '#282828' -nf '#d79921' -sb '#98971a' -sf '#282828' -fn 'Fira Code:style=Medium:size=13'"
+
+## Launch // Application // <><Ctrl> d ##
+bindsym $mod+Control+d exec dmenu_run -i -nb '#282828' -sb '#98971a' -fn 'Fira Code:style=Medium:size=13'
 
 ## Launch // Command // <><Shift> Space ##
 set_from_resource $i3-wm.binding.launcher.cmd i3-wm.binding.launcher.cmd Shift+space
@@ -285,7 +291,7 @@ bindsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
 
 ## Modify // Window Layout Mode // <> t ##
 set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
-bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed stacking splith splitv
+bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
 
 ## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
 bindsym $mod+Shift+$ws1_key move container to workspace number $ws1
@@ -348,21 +354,9 @@ floating_modifier $mod
 set_from_resource $i3-wm.hide.edge.borders i3-wm.hide.edge.borders smart
 hide_edge_borders $i3-wm.hide.edge.borders
 
-###############################################################################
-# Personal settings
-###############################################################################
-
-#------------
-# Launchers
-#------------
-## Launch // dmenu // <> g ##
-bindsym $mod+Ctrl+d exec --no-startup-id j4-dmenu-desktop
-
-#-------------
-# Appearance
-#-------------
-# Create variables from Xresources for i3's look.
-set_from_resource $focused.color.child_border "#FBD308"
+# Set the default layout mode
+set_from_resource $i3-wm.workspace.layout i3-wm.workspace.layout default
+workspace_layout $i3-wm.workspace.layout
 
 ###############################################################################
 # Session Management
@@ -437,6 +431,11 @@ bindsym $mod+$i3-wm.binding.wifi exec $i3-wm.program.wifi
 set_from_resource $i3-wm.binding.bluetooth i3-wm.binding.bluetooth b
 set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
 bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
+
+## Modify // Sound Settings // <> s ##
+set_from_resource $i3-wm.binding.sound i3-wm.binding.sound s
+set_from_resource $i3-wm.program.sound i3-wm.program.sound gnome-control-center --class=floating_window sound
+bindsym $mod+$i3-wm.binding.sound exec $i3-wm.program.sound
 
 ## Launch // File Browser // <><Shift> n ##
 set_from_resource $i3-wm.binding.files i3-wm.binding.files Shift+n
@@ -546,7 +545,7 @@ set_from_resource $i3-wm.gaps.popup_during_fullscreen i3-wm.gaps.popup_during_fu
 popup_during_fullscreen $i3-wm.gaps.popup_during_fullscreen
 
 # window focus follows your mouse movements as the mouse crosses window borders
-set_from_resource $i3-wm.gaps.focus_follows_mouse i3-wm.gaps.focus_follows_mouse no
+set_from_resource $i3-wm.gaps.focus_follows_mouse i3-wm.gaps.focus_follows_mouse yes
 focus_follows_mouse $i3-wm.gaps.focus_follows_mouse
 
 ###############################################################################
@@ -558,7 +557,7 @@ set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
 set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
 set_from_resource $focused.color.indicator i3-wm.client.focused.color.indicator "#268bd2"
-# set_from_resource $focused.color.child_border i3-wm.client.focused.color.child_border
+set_from_resource $focused.color.child_border i3-wm.client.focused.color.child_border
 
 set_from_resource $focused_inactive.color.border i3-wm.client.focused_inactive.color.border "#002b36"
 set_from_resource $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#073642"
@@ -608,7 +607,7 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets i3 font for dialogs
-set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 13
+set_from_resource $i3-wm.font i3-wm.font pango:Fira Code Medium 13
 font $i3-wm.font
 
 ###############################################################################
@@ -616,7 +615,7 @@ font $i3-wm.font
 ###############################################################################
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
-set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
+set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Fira Code Medium 13, Material Design Icons 13
 set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
@@ -674,7 +673,7 @@ exec --no-startup-id $i3-wm.program.nm-applet
 
 # User programs from Xresources
 # To use, define an Xresource key i3-wm.program.[1-3] with the value of the program to launch.
-# See https://regolith-linux.org/docs/howto/override-xres/ for details.
+# See https://regolith-linux.org/docs/howtos/override-xres/ for details.
 set_from_resource $i3-wm.program.1 i3-wm.program.1 :
 exec --no-startup-id $i3-wm.program.1
 set_from_resource $i3-wm.program.2 i3-wm.program.2 :
